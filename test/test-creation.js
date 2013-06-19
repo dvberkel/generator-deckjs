@@ -27,6 +27,7 @@ describe('deckjs generator', function () {
       'js/setup.js',
       'package.json',
       'bower.json',
+      'README.md',
     ];
 
     helpers.mockPrompt(this.app, {

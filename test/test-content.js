@@ -32,6 +32,10 @@ describe('deckjs generator', function () {
 		var pkg = JSON.parse(content);
 		expect(pkg.name).to.equal('presentation-the-winding-road-to-eloquence');
 	    },
+	    'README.md' : function(content) {
+		var title = /^Presentation The winding road to eloquence/;
+		expect(!!content.match(title)).to.equal(true);
+	    },
 	};
 
 	helpers.mockPrompt(this.app, {
