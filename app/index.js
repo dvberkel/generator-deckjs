@@ -45,8 +45,7 @@ DeckjsGenerator.prototype.askFor = function askFor() {
 };
 
 DeckjsGenerator.prototype.app = function app() {
-  this.mkdir('app');
-  this.mkdir('app/templates');
+  this.mkdir('js');
 
   this.copy('_package.json', 'package.json');
   this.copy('_bower.json', 'bower.json');
