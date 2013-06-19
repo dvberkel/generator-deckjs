@@ -25,6 +25,7 @@ describe('deckjs generator', function () {
       '.jshintrc',
       '.editorconfig',
       'js/setup.js',
+      'package.json',
     ];
 
     helpers.mockPrompt(this.app, {

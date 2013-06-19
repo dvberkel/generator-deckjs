@@ -39,6 +39,8 @@ DeckjsGenerator.prototype.askFor = function askFor() {
 
   this.prompt(prompts, function (props) {
     this.someOption = props.someOption;
+    this.title = props.title;
+    this.description = props.description;
 
     cb();
   }.bind(this));
@@ -47,7 +49,7 @@ DeckjsGenerator.prototype.askFor = function askFor() {
 DeckjsGenerator.prototype.app = function app() {
   this.mkdir('js');
 
-  this.copy('_package.json', 'package.json');
+  this.template('_package.json', 'package.json');
   this.copy('_bower.json', 'bower.json');
   this.copy('_setup.js', 'js/setup.js');
 };
