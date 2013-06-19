@@ -1,0 +1,37 @@
+{
+  "name": "generator-deckjs",
+  "version": "0.0.0",
+  "description": "A generator for Yeoman",
+  "keywords": [
+    "yeoman-generator"
+  ],
+  "homepage": "https://github.com/dvberkel/generator-deckjs",
+  "bugs": "https://github.com/dvberkel/generator-deckjs/issues",
+  "author": {
+    "name": "Daan van Berkel",
+    "email": "daan.v.berkel.1980@gmail.com",
+    "url": "https://github.com/dvberkel"
+  },
+  "main": "app/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/dvberkel/generator-deckjs.git"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "dependencies": {
+    "yeoman-generator": "~0.12.0"
+  },
+  "devDependencies": {
+    "mocha": "~1.10.0"
+  },
+  "engines": {
+    "node": ">=0.8.0"
+  },
+  "licenses": [
+    {
+      "type": "MIT"
+    }
+  ]
+}
