@@ -27,7 +27,9 @@ describe('deckjs generator', function () {
     ];
 
     helpers.mockPrompt(this.app, {
-      'someOption': 'Y'
+      'someOption': 'Y',
+      'title': 'The winding road to eloquence',
+      'description': 'A tale of love lost',
     });
     this.app.options['skip-install'] = true;
     this.app.run({}, function () {

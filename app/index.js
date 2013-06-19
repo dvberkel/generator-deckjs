@@ -27,6 +27,14 @@ DeckjsGenerator.prototype.askFor = function askFor() {
     name: 'someOption',
     message: 'Would you like to enable this option?',
     default: true
+  }, {
+    name: 'title',
+    message: 'What is the title of your presentation?',
+    default: 'Title'
+  }, {
+    name: 'description',
+    message: 'Describe your presentation',
+    default: 'My best presentation yet.'
   }];
 
   this.prompt(prompts, function (props) {
