@@ -27,7 +27,11 @@ describe('deckjs generator', function () {
 		var pkg = JSON.parse(content);
 		expect(pkg.name).to.equal('presentation-the-winding-road-to-eloquence');
 		expect(pkg.description).to.equal('A tale of love lost');
-	    }
+	    },
+	    'bower.json' : function(content) {
+		var pkg = JSON.parse(content);
+		expect(pkg.name).to.equal('presentation-the-winding-road-to-eloquence');
+	    },
 	};
 
 	helpers.mockPrompt(this.app, {

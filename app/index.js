@@ -50,7 +50,7 @@ DeckjsGenerator.prototype.app = function app() {
   this.mkdir('js');
 
   this.template('_package.json', 'package.json');
-  this.copy('_bower.json', 'bower.json');
+  this.template('_bower.json', 'bower.json');
   this.copy('_setup.js', 'js/setup.js');
 };
 

@@ -1,6 +1,7 @@
 {
-  "name": "package",
+  "name": "presentation-<%= _.slugify(title) %>",
   "version": "0.0.0",
-  "dependencies": {}
+  "dependencies": {
+    "deck.js": "latest"
+  }
 }
-
