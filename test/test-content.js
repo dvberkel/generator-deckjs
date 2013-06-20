@@ -36,6 +36,12 @@ describe('deckjs generator', function () {
 		var title = /^Presentation The winding road to eloquence/;
 		expect(!!content.match(title)).to.equal(true);
 	    },
+	    'index.html' : function(content) {
+		var title = /<title>The winding road to eloquence<\/title>/;
+		var h1 = /<h1>The winding road to eloquence<\/h1>/
+		expect(!!content.match(title)).to.equal(true);
+		expect(!!content.match(h1)).to.equal(true);
+	    },
 	};
 
 	helpers.mockPrompt(this.app, {
