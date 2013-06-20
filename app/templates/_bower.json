@@ -2,6 +2,7 @@
   "name": "presentation-<%= _.slugify(title) %>",
   "version": "0.0.0",
   "dependencies": {
-    "deck.js": "latest"
+    "deck.js": "latest",
+    "jasmine": "latest"
   }
 }

@@ -31,6 +31,8 @@ describe('deckjs generator', function () {
 	    'bower.json' : function(content) {
 		var pkg = JSON.parse(content);
 		expect(pkg.name).to.equal('presentation-the-winding-road-to-eloquence');
+		expect(pkg.dependencies['deck.js']).to.equal('latest');
+		expect(pkg.dependencies['jasmine']).to.equal('latest');
 	    },
 	    'README.md' : function(content) {
 		var title = /^Presentation The winding road to eloquence/;
@@ -41,6 +43,20 @@ describe('deckjs generator', function () {
 		var h1 = /<h1>The winding road to eloquence<\/h1>/
 		expect(!!content.match(title)).to.equal(true);
 		expect(!!content.match(h1)).to.equal(true);
+	    },
+	    'spec/namespaceSpec.js' : function(content) {
+		var describe = /describe\('A namespace', function\(\)/;
+		var it = /it\('should be defined', function\(\)/;
+		var expectation = /expect\(presentation\).toBeDefined\(\);/;
+		expect(!!content.match(describe)).to.equal(true);
+		expect(!!content.match(it)).to.equal(true);
+		expect(!!content.match(expectation)).to.equal(true);
+	    },
+	    'js/namespace.js' : function(content) {
+		var window = /window.presentation =/;
+		var validReturn = /return presentation;/;
+		expect(!!content.match(window)).to.equal(true);
+		expect(!!content.match(validReturn)).to.equal(true);
 	    },
 	};
 

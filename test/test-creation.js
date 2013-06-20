@@ -29,6 +29,9 @@ describe('deckjs generator', function () {
       'bower.json',
       'README.md',
       'index.html',
+      'SpecRunner.html',
+      'spec/namespaceSpec.js',
+      'js/namespace.js',
     ];
 
     helpers.mockPrompt(this.app, {

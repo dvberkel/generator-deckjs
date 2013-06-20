@@ -48,11 +48,15 @@ DeckjsGenerator.prototype.askFor = function askFor() {
 
 DeckjsGenerator.prototype.app = function app() {
   this.mkdir('js');
+  this.mkdir('spec');
 
   this.template('_package.json', 'package.json');
   this.template('_bower.json', 'bower.json');
   this.template('_README.md', 'README.md');
   this.template('_index.html', 'index.html');
+  this.template('_SpecRunner.html', 'SpecRunner.html');
+  this.template('_namespaceSpec.js', 'spec/namespaceSpec.js');
+  this.template('_namespace.js', 'js/namespace.js');
   this.copy('_setup.js', 'js/setup.js');
 };
 
