@@ -32,6 +32,7 @@ describe('deckjs generator', function () {
 		var pkg = JSON.parse(content);
 		expect(pkg.name).to.equal('presentation-the-winding-road-to-eloquence');
 		expect(pkg.dependencies['deck.js']).to.equal('latest');
+		expect(pkg.dependencies['toc']).to.equal('latest');
 		expect(pkg.dependencies['jasmine']).to.equal('latest');
 	    },
 	    'README.md' : function(content) {
