@@ -35,7 +35,6 @@ describe('deckjs generator', function () {
     ];
 
     helpers.mockPrompt(this.app, {
-      'someOption': 'Y',
       'title': 'The winding road to eloquence',
       'description': 'A tale of love lost',
     });
