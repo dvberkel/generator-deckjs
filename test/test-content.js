@@ -59,6 +59,10 @@ describe('deckjs generator', function () {
 		expect(!!content.match(window)).to.equal(true);
 		expect(!!content.match(validReturn)).to.equal(true);
 	    },
+	    '.bowerrc' : function(content) {
+		var directory = /directory/;
+		expect(!!content.match(directory)).to.equal(true);
+	    },
 	};
 
 	helpers.mockPrompt(this.app, {
